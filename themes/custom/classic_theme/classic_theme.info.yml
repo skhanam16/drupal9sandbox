@@ -1,0 +1,8 @@
+name: Classic Theme
+type: theme
+description: My Classic theme
+core_version_requirement: ^8 || ^9
+base theme: classy
+
+libraries:
+  - classic_theme/global
