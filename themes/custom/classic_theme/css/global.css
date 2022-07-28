@@ -3,10 +3,61 @@
   padding: 0;
   box-sizing: border-box; }
 
-.header {
+.layout-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #fefdfc; }
+
+.banner {
   background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
+  height: 10vh;
+  width: 100%; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+
+.cards {
+  background-color: white;
+  margin: 1rem;
+  padding: 1rem;
+  /* border: .5px solid #777; */
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: .25rem;
+  max-width: 350px; }
+
+.cards-header {
+  font-size: 1.5rem;
+  margin-bottom: .5rem; }
+
+.card-body {
+  font-size: .5rem; }
+
+.card-footer {
+  margin-top: 1rem; }
+
+.btn {
+  --color: hsl(200, 50%, 50%);
+  background: var(--color);
+  padding: .5em;
+  border: none;
+  color: white;
+  border-radius: .25em;
+  cursor: pointer; }
+
+.btn:hover, .btn:focus {
+  background: #66aacc; }
+
+.btn.btn-contact {
+  background: none;
+  border: 1px solid #66aacc;
+  color: var(--color); }
+
+.btn.btn-contact:hover, .btn.btn-contact:focus {
+  background: #d9eaf2;
+  color: white; }
+
+.btn + .btn {
+  margin-left: .25rem; }
 
 /*# sourceMappingURL=global.css.map */

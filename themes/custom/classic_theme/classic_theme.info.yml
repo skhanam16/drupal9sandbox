@@ -4,5 +4,10 @@ description: My Classic theme
 core_version_requirement: ^8 || ^9
 base theme: classy
 
+stylesheets-remove:
+  - core/themes/classy/css/components/ui-dialog.css
+  - core/themes/stable/css/system/components/align.module.css
+
 libraries:
-  - classic_theme/global
+  - classic_theme/global-css
+  - classic_theme/global-js
