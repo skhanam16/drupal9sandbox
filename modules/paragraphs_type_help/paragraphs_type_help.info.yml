@@ -1,0 +1,16 @@
+name: 'Paragraphs Type Help'
+type: module
+description: 'Provides a help entity that renders on Paragraphs type displays.'
+package: Paragraphs
+configure: entity.paragraphs_type_help.collection
+core_version_requirement: ^8.8 || ^9
+dependencies:
+  - paragraphs:paragraphs
+  - drupal:image
+  - drupal:options
+  - drupal:text
+
+# Information added by Drupal.org packaging script on 2021-09-16
+version: '3.0.0'
+project: 'paragraphs_type_help'
+datestamp: 1631804226

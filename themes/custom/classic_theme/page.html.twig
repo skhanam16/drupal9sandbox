@@ -45,48 +45,57 @@
  * @ingroup themeable
  */
 #}
-  <header role="banner" class="banner">
-    {{ page.header }}
-     {{ page.primary_menu }}
+
+
+  <header role="banner" class="container-fluid">
+    <nav id="nav" class="flex font-poppins">
+      {{ page.primary_menu }}
+      {{ page.secondary_menu }}
+      {{ page.highlighted }}
+      {{ page.help }}
+      {{ page.breadcrumb }}
+    
+  </nav>
+ 
     
   </header>
+  
+ {# ---main section -- #}
 
-<div class="layout-container">
-
-
-  {{ page.secondary_menu }}
-
-  {{ page.breadcrumb }}
-
-  {{ page.highlighted }}
-
-  {{ page.help }}
-
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
-
-    <div class="layout-content">
+<main role="main" id="site-main">
+<section class="container mx-auto">
+ 
       {{ page.content }}
-    </div>{# /.layout-content #}
-
+  
+  <div class="sidebar-left">
     {% if page.sidebar_first %}
       <aside class="layout-sidebar-first" role="complementary">
         {{ page.sidebar_first }}
       </aside>
     {% endif %}
+  </div>
 
+  <div class="sidebar-right">
     {% if page.sidebar_second %}
       <aside class="layout-sidebar-second" role="complementary">
         {{ page.sidebar_second }}
       </aside>
     {% endif %}
-
+  </div>
+  </section>
   </main>
-
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
+  
+    <footer role="contentinfo" id="footer">
+    <section class="container mx-auto py-10 text-red">
+    
+        <div>
+          {{ page.footer }}
+        </div>
+   
+    
+    </section>
     </footer>
-  {% endif %}
 
-</div>{# /.layout-container #}
+
+
+
